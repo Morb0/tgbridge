@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 
-import { MtprotoProvider } from './mtporoto.provider';
 import telegramConfig from './telegram.config';
+import { TelegramProvider } from './telegram.provider';
 import { TelegramService } from './telegram.service';
 
 @Module({
@@ -12,7 +12,7 @@ import { TelegramService } from './telegram.service';
       load: [telegramConfig],
     }),
   ],
-  providers: [TelegramService, MtprotoProvider],
+  providers: [TelegramService, TelegramProvider],
   exports: [TelegramService],
 })
 export class AppModule {}
