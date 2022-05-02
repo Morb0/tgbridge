@@ -1,10 +1,10 @@
 {
   "name": "tgbridge",
-  "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "version": "1.0.0",
+  "description": "Bot-to-Bot bridge",
+  "author": "Morb0",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
