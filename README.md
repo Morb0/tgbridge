@@ -1,4 +1,4 @@
-# Telegram Bridge
+# TGBridge
 Telegram Bot-to-Bot communication bridge.\
 User-bot resend message received from trusted peer to peer specified in message text payload.
 
@@ -8,3 +8,6 @@ User-bot resend message received from trusted peer to peer specified in message 
 - Bot B receive message from Bridge `Lorem Ipsum`.
 
 This makes more sense for forwarding files, since each user has a unique ID for uploaded files.
+
+## Docker
+Deploy ready container available on [DockerHub](https://hub.docker.com/r/morb0/tgbridge).
