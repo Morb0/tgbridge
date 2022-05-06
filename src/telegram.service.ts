@@ -20,7 +20,7 @@ export class TelegramService implements OnApplicationBootstrap {
 
   private async onNewMessage(event: NewMessageEvent): Promise<void> {
     this.logger.verbose(
-      `New message from "${event.message.fromId}" - "${event.message.text}"`,
+      `New message from "${event.message._senderId}" - "${event.message.text}"`,
     );
 
     if (!event.isPrivate) {
