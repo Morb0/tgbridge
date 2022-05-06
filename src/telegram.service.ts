@@ -27,10 +27,12 @@ export class TelegramService implements OnApplicationBootstrap {
       return;
     }
 
-    const isAllowedPeer = this.configService
-      .get('ALLOWED_PEER_IDS', '')
-      .split(',')
-      .includes(event.chatId.toString());
+    const allowedPeerIds = this.configService
+      .get('ALLOWED_PEER_IDS', '*')
+      .split(',');
+    const isAllowedPeer =
+      allowedPeerIds.includes(event.chatId.toString()) ||
+      allowedPeerIds.includes('*');
     if (!isAllowedPeer) {
       return;
     }
